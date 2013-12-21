@@ -3,9 +3,20 @@ package my.fazreil.util;
 public class Roman {
 	
 	private String roman[][] = {{"I","V","X"},{"X","L","C"},{"C","D","M"},{"M","",""}};
-	
+	private String initialValue = null;
+        
+        
 	public Roman()
-	{}
+	{
+            System.out.println(initialValue);
+        }
+        
+        public Roman(String defaultValue)
+        {
+            System.out.println("initializing ROMAN with default value: "+defaultValue);
+            initialValue = defaultValue;
+            System.out.println(initialValue);
+        }
 	
 	/**
 	 *@author fazreil.jalil
@@ -78,13 +89,23 @@ public class Roman {
 		}
 		return returnvalue;
 	}
-	/**
+	
+        public static int romanize(int anInteger)
+        {
+            return anInteger;
+        }
+        /**
 	 * @author fazreil.jalil
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		Roman roman = new Roman();
-		System.out.println(roman.romanize(new Long(1234)));
+                Long aLongValue, anotherLongValue;
+                aLongValue = new Long(34);
+                
+                anotherLongValue = aLongValue;
+		System.out.println(roman.romanize(anotherLongValue));
+                
 	}
 
 }
